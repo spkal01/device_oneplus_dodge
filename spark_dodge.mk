@@ -11,16 +11,17 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from dodge device
 $(call inherit-product, device/oneplus/dodge/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common spark stuff.
+$(call inherit-product, vendor/spark/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_dodge
+PRODUCT_NAME := spark_dodge
 PRODUCT_DEVICE := dodge
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := CPH2653
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
+TARGET_SUPPORTED_REFRESH_RATES := 60,90,120
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="qssi_64-user 16 BP2A.250605.015 1775048494038 release-keys" \

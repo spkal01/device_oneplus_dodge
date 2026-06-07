@@ -22,6 +22,10 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 3168
 TARGET_SCREEN_WIDTH := 1440
 
+# Camera: APS turbo soft/green/crash runtime fix (interposer loaded by libAlgoProcess via DT_NEEDED)
+PRODUCT_PACKAGES += \
+    libapsfixup
+
 # Display
 $(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
 $(call soong_config_set,surfaceflinger,frame_rate_category_min,1)
